@@ -1,21 +1,25 @@
 package com.chandni.shapes;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class Main {
     public static void main(String[] args) {
-        Square square = new Square();
-        square.rotate();
-        square.playSound();
+        Collection<Shape> shapes = new ArrayList<>();
 
-        Circle circle = new Circle();
-        circle.rotate();
-        circle.playSound();
+        Shape square = new Square();
+        Shape circle = new Circle();
+        Shape triangle = new Triangle();
+        Shape amoeba = new Amoeba();
+        shapes.add(square);
+        shapes.add(circle);
+        shapes.add(triangle);
+        shapes.add(amoeba);
 
-        Triangle triangle = new Triangle();
-        triangle.rotate();
-        triangle.playSound();
+        for (Shape shape : shapes) {
+            shape.rotate();
+            shape.playSound();
+        }
 
-        Amoeba amoeba = new Amoeba();
-        amoeba.rotate();
-        amoeba.playSound();
     }
 }
