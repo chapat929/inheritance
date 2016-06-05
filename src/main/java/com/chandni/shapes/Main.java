@@ -2,6 +2,7 @@ package com.chandni.shapes;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.function.Consumer;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,10 +17,7 @@ public class Main {
         shapes.add(triangle);
         shapes.add(amoeba);
 
-        for (Shape shape : shapes) {
-            shape.rotate();
-            shape.playSound();
-        }
+        shapes.forEach(shape -> {shape.rotate(); shape.playSound();});
 
     }
 }
