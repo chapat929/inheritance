@@ -1,9 +1,6 @@
 package com.chandni.shapes;
 
-public class Amoeba {
-    public void rotate() {
-        System.out.println("Amoeba rotating");
-    }
+public class Amoeba extends Shape{
 
     public void playSound() {
         System.out.println("Amoeba playing a SPECIAL sound");
